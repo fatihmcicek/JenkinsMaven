@@ -1,8 +1,8 @@
 package org.example;
 
-import static org.junit.Assert.assertEquals;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import org.junit.Test;
 
 /**
  * @author https://www.linkedin.com/in/fatihmcicek/
@@ -16,20 +16,21 @@ public class AppTest {
     @Test
     public void AddTest() {
         int addResult = app.Add(number1, number2);
-        assertEquals("This is not equal!",
-                8, addResult);
+        Assert.assertEquals(8, addResult);
+        System.out.println("This is not equal!");
+
     }
 
     @Test
     public void SubtractTest() {
-        int SubResult = app.Subtract(number2,number1);
-        assertEquals(2,SubResult);
+        int SubResult = app.Subtract(number2, number1);
+        Assert.assertEquals(2, SubResult);
     }
 
     @Test
     public void MultiplyTest() {
-        int MultipResult = app.Multiply(number2,number1);
-        assertEquals(15,MultipResult);
+        int MultipResult = app.Multiply(number2, number1);
+        Assert.assertEquals(15, MultipResult);
     }
 
     @Test
